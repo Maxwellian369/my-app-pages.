@@ -1,22 +1,164 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/style.css"><title>Maxwellian | Automation Engineer</title>
-<meta name="description" content="Maxwellian builds self-hosted automations with n8n and custom API integrations, including a Google Drive connector for ChatGPT."></head><body>
-<header class="site"><div class="wrap"><a class="brand" href="/">Maxwellian</a><nav><a href="/#about">About</a><a href="/#projects">Projects</a><a href="/#drive-connector">Drive connector</a><a href="/privacy.html">Privacy</a></nav></div></header>
-<main class="wrap">
-<div class="hero"><h1>Automations that connect your tools and keep your data yours.</h1>
-<p class="lead">I'm an automation engineer and business project developer. I build self-hosted workflows with n8n and custom API integrations.</p>
-<a class="btn" href="#drive-connector">See the Drive connector</a><a class="btn alt" href="https://github.com/Maxwellian369">GitHub profile</a></div>
-<section id="about"><h2>About</h2>
-<p>I design and test business applications that run on infrastructure I control. My focus is self-hosted n8n instances that link tools such as ChatGPT and Google Drive, so routine work and file handling happen without manual steps.</p></section>
-<section id="projects"><h2>Projects</h2>
-<div class="item"><h3>n8n Automation Hub</h3><p>A self-hosted environment that connects APIs, including ChatGPT and Google Drive, into reliable data flows and internal decision workflows.</p></div>
-<div class="item"><h3>Maxwellian Drive Connector</h3><p>A custom Google OAuth application that lets ChatGPT read and write files in your own Google Drive when you ask it to. Details below.</p></div></section>
-<section id="drive-connector"><h2>Maxwellian Drive Connector</h2>
-<div class="box"><p><strong>What it does.</strong> After you sign in with Google and approve access, the connector lets ChatGPT find, read, create and update files in your Google Drive, only when you request it in a ChatGPT conversation.</p>
-<dl><dt>Who it is for</dt><dd>Individual users who want ChatGPT to work with their own Drive files.</dd>
-<dt>What data it touches</dt><dd>Only the Drive files and metadata needed to complete the request you made. Nothing is stored on Maxwellian servers.</dd>
-<dt>How to stop it</dt><dd>Remove access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</dd></dl>
-<p>Read the full <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.</p>
-<p>Maxwellian.help's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p></div></section>
-<section id="contact"><h2>Contact</h2><p>Questions or data requests: <a href="mailto:alireza.hassani.com@gmail.com">alireza.hassani.com@gmail.com</a></p></section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRISM | Decision Intelligence for Financial Institutions</title>
+<meta name="description" content="PRISM turns raw data into causal, evidence-backed investment intelligence. Automate due diligence, model risk and rank your pipeline.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0b10;--bg2:#10131c;--ink:#eef1f6;--mute:#9aa3b5;--line:rgba(255,255,255,.1);--glass:rgba(255,255,255,.04);--blue:#2563eb;--blue2:#5b8cff;--green:#10b981}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;background-image:radial-gradient(60rem 30rem at 85% -10%,rgba(37,99,235,.18),transparent 60%)}
+a{color:var(--blue2)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.1;margin:0}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:-.015em}
+h2{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.01em}
+h3{font-size:1.55rem}
+p{margin:0}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(10,11,16,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:4rem}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:600;letter-spacing:.14em;color:var(--ink);text-decoration:none}
+.nav nav{display:flex;align-items:center;gap:1.5rem}
+.nav nav a{color:var(--mute);text-decoration:none;font-size:.95rem}
+.nav nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:8px;font-weight:600;text-decoration:none;background:var(--blue);color:#fff;border:1px solid var(--blue);transition:background .2s}
+.btn:hover{background:#1d4fd0}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{background:var(--glass)}
+.btn.sm{padding:.5rem 1rem;font-size:.9rem;color:#fff}
+.hero{display:grid;gap:2.5rem;padding:4.5rem 0 4rem;align-items:center}
+.hero p.lead{color:var(--mute);font-size:1.2rem;max-width:34rem;margin:1.25rem 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.viz svg{width:100%;height:auto;display:block}
+.beam{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 1.6s .5s ease-out forwards}
+.beam.b2{animation-delay:.7s}.beam.b3{animation-delay:.9s}
+@keyframes draw{to{stroke-dashoffset:0}}
+section{padding:5.5rem 0}
+.why{border-top:1px solid var(--line)}
+.why .grid{display:grid;gap:3rem}
+.why .problem{color:var(--mute);font-size:1.25rem}
+.why .solution{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.25}
+.why .tag{display:block;color:var(--blue2);font-size:.95rem;font-weight:600;margin-bottom:.6rem}
+.sec-head{margin-bottom:2.5rem;max-width:36rem}
+.cards{display:grid;gap:1.25rem}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:1.75rem;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.card svg{width:34px;height:34px;stroke:var(--green);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.1rem}
+.card p{color:var(--mute);margin-top:.6rem}
+.steps{display:grid;gap:0;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--line)}
+.step .n{font-family:"Instrument Serif",Georgia,serif;font-size:2rem;color:var(--blue2);line-height:1}
+.step p{color:var(--mute);margin-top:.35rem;max-width:30rem}
+.founders{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.founders p{color:var(--mute);max-width:34rem;margin:1.1rem auto 2rem;font-size:1.15rem}
+.btn.lg{padding:1rem 2rem;font-size:1.05rem}
+.drive .box{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:2rem}
+.drive p{color:var(--mute);margin-top:.9rem;max-width:44rem}
+.drive ul{color:var(--mute);padding-left:1.2rem;margin:.9rem 0 0}
+.drive .small{font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;color:var(--mute);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer a{color:var(--mute);margin-right:1.25rem}
+footer a:hover{color:var(--ink)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+@media(min-width:56rem){.hero{grid-template-columns:1.05fr 1fr}.why .grid{grid-template-columns:1fr 1.3fr}.cards{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(3,1fr);border-top:0}.step{grid-template-columns:1fr;border-bottom:0;border-top:1px solid var(--line);padding-right:2rem}}
+@media(max-width:40rem){.nav nav a:not(.btn){display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.beam{animation:none;stroke-dashoffset:0}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body class="no-js">
+<header class="nav"><div class="wrap">
+<a class="logo" href="#top" aria-label="PRISM home"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 22 20H2z" fill="none" stroke="#5b8cff" stroke-width="1.8" stroke-linejoin="round"/></svg>PRISM</a>
+<nav><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#founders">Founders</a><a href="#drive-connector">Drive Connector</a><a class="btn sm" href="https://maxwellian.decilehub.com/submit_your_company">Submit a company</a></nav>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<h1>Decision intelligence for the modern financial institution.</h1>
+<p class="lead">PRISM transforms raw data into actionable, causal investment intelligence. Automate due diligence, mitigate risk and surface high-conviction opportunities with AI.</p>
+<div class="cta"><a class="btn" href="https://maxwellian.decilehub.com/submit_your_company">Submit your company for review</a><a class="btn ghost" href="https://notion.notion.site/The-AI-Fundraising-Kit-281efdeead058156bd19e58435c270aa">Explore the AI Fundraising Kit</a></div>
+</div>
+<div class="viz" role="img" aria-label="Scattered data points converge into a prism and leave as three clear outputs: risk, evidence and decision.">
+<svg viewBox="0 0 560 400" aria-hidden="true">
+<defs>
+<linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#5b8cff"/></linearGradient>
+<linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#6ee7b7"/></linearGradient>
+<linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
+<linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgba(255,255,255,.14)"/><stop offset="1" stop-color="rgba(255,255,255,.02)"/></linearGradient>
+</defs>
+<g stroke="rgba(255,255,255,.18)" stroke-width="1">
+<line x1="22" y1="70" x2="222" y2="195"/><line x1="48" y1="130" x2="222" y2="195"/><line x1="18" y1="190" x2="222" y2="195"/><line x1="60" y1="250" x2="222" y2="195"/><line x1="30" y1="320" x2="222" y2="195"/><line x1="110" y1="95" x2="222" y2="195"/><line x1="120" y1="300" x2="222" y2="195"/>
+</g>
+<g fill="#9aa3b5"><circle cx="22" cy="70" r="3"/><circle cx="48" cy="130" r="2.5"/><circle cx="18" cy="190" r="3.5"/><circle cx="60" cy="250" r="2.5"/><circle cx="30" cy="320" r="3"/><circle cx="110" cy="95" r="2"/><circle cx="120" cy="300" r="2.5"/></g>
+<polygon points="280,90 390,290 170,290" fill="url(#face)" stroke="rgba(255,255,255,.55)" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="222" y1="195" x2="338" y2="195" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>
+<g fill="none" stroke-width="3" stroke-linecap="round">
+<path class="beam" d="M338 195 L520 120" stroke="url(#g1)"/>
+<path class="beam b2" d="M338 195 L520 200" stroke="url(#g2)"/>
+<path class="beam b3" d="M338 195 L520 280" stroke="url(#g3)"/>
+</g>
+<g font-family="Inter,system-ui,sans-serif" font-size="13" fill="#eef1f6"><text x="440" y="108">Risk score</text><text x="440" y="190">Evidence</text><text x="440" y="300">Decision</text></g>
+</svg>
+</div>
+</div>
+
+<section class="why"><div class="wrap grid">
+<p class="problem reveal"><span class="tag">The problem</span>The modern financial landscape is drowning in unstructured data. Manual due diligence is slow, biased and often misses critical red flags.</p>
+<p class="solution reveal"><span class="tag" style="font-family:Inter,system-ui,sans-serif">The solution</span>PRISM is the intelligent layer between data and decision. Autonomous AI agents continuously analyze, forecast and optimize your pipeline, turning raw market data into investment intelligence in real time.</p>
+</div></section>
+
+<section id="capabilities"><div class="wrap">
+<div class="sec-head reveal"><h2>Built for capital allocation decisions.</h2></div>
+<div class="cards">
+<article class="card reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8 11h6M11 8v6"/></svg><h3>Automated due diligence</h3><p>Deep-dive analysis of financial health, market positioning and team competency in seconds.</p></article>
+<article class="card reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 20h18z"/><path d="M12 10v4M12 17v.01"/></svg><h3>Causal risk modeling</h3><p>Identify hidden vulnerabilities and simulate outcomes before capital is deployed.</p></article>
+<article class="card reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h6"/><path d="m16 15 2 2 3-4"/></svg><h3>Pipeline intelligence</h3><p>Score, rank and track inbound opportunities with AI-driven precision, integrating with your existing CRM.</p></article>
+</div></div></section>
+
+<section id="process" style="padding-top:1rem"><div class="wrap">
+<div class="sec-head reveal"><h2>From raw inputs to a defensible decision.</h2></div>
+<div class="steps">
+<div class="step reveal"><span class="n">1</span><div><h3>Ingest</h3><p>Connect your data sources: CRM, pitch decks and financial models.</p></div></div>
+<div class="step reveal"><span class="n">2</span><div><h3>Analyze</h3><p>PRISM’s AI agents run deep, multi-modal due diligence.</p></div></div>
+<div class="step reveal"><span class="n">3</span><div><h3>Decide</h3><p>Receive evidence-backed recommendations and risk scores.</p></div></div>
+</div></div></section>
+
+<section id="founders" class="founders"><div class="wrap reveal">
+<h2>Ready to be analyzed?</h2>
+<p>Submit your company directly to the Maxwellian AI Decision Intelligence pipeline for a comprehensive, unbiased review.</p>
+<a class="btn lg" href="https://maxwellian.decilehub.com/submit_your_company">Submit your proposal to Decile Hub</a>
+</div></section>
+
+<section id="drive-connector" class="drive"><div class="wrap"><div class="box reveal">
+<h2>Maxwellian Drive Connector</h2>
+<p>A Google OAuth application from Maxwellian that lets ChatGPT find, read, create and update files in your own Google Drive, only when you ask it to in a ChatGPT conversation.</p>
+<ul><li>Accesses only the Drive files and metadata needed for the request you make.</li><li>Maxwellian does not store your Drive files.</li><li>Revoke access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li></ul>
+<p class="small">Read the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>. Maxwellian.help’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+</div></div></section>
 </main>
-<footer><div class="wrap"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="https://github.com/Maxwellian369">GitHub</a><p>© 2026 Maxwellian.help</p></div></footer></body></html>
+
+<footer><div class="wrap">
+<div><strong style="letter-spacing:.14em;color:var(--ink)">PRISM</strong><br>© 2026 Maxwellian</div>
+<div><a href="mailto:info@maxwellian.help">info@maxwellian.help</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+</div></footer>
+
+<script>
+(function(){
+var b=document.body;b.classList.remove('no-js');
+var els=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
