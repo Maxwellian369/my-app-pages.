@@ -1,164 +1,201 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PRISM | Decision Intelligence for Financial Institutions</title>
-<meta name="description" content="PRISM turns raw data into causal, evidence-backed investment intelligence. Automate due diligence, model risk and rank your pipeline.">
-<meta name="color-scheme" content="dark">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0a0b10;--bg2:#10131c;--ink:#eef1f6;--mute:#9aa3b5;--line:rgba(255,255,255,.1);--glass:rgba(255,255,255,.04);--blue:#2563eb;--blue2:#5b8cff;--green:#10b981}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;background-image:radial-gradient(60rem 30rem at 85% -10%,rgba(37,99,235,.18),transparent 60%)}
-a{color:var(--blue2)}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
-.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
-h1,h2,h3{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.1;margin:0}
-h1{font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:-.015em}
-h2{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.01em}
-h3{font-size:1.55rem}
-p{margin:0}
-header.nav{position:sticky;top:0;z-index:10;background:rgba(10,11,16,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:4rem}
-.logo{display:flex;align-items:center;gap:.6rem;font-weight:600;letter-spacing:.14em;color:var(--ink);text-decoration:none}
-.nav nav{display:flex;align-items:center;gap:1.5rem}
-.nav nav a{color:var(--mute);text-decoration:none;font-size:.95rem}
-.nav nav a:hover{color:var(--ink)}
-.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:8px;font-weight:600;text-decoration:none;background:var(--blue);color:#fff;border:1px solid var(--blue);transition:background .2s}
-.btn:hover{background:#1d4fd0}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.ghost:hover{background:var(--glass)}
-.btn.sm{padding:.5rem 1rem;font-size:.9rem;color:#fff}
-.hero{display:grid;gap:2.5rem;padding:4.5rem 0 4rem;align-items:center}
-.hero p.lead{color:var(--mute);font-size:1.2rem;max-width:34rem;margin:1.25rem 0 2rem}
-.cta{display:flex;flex-wrap:wrap;gap:.9rem}
-.viz svg{width:100%;height:auto;display:block}
-.beam{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 1.6s .5s ease-out forwards}
-.beam.b2{animation-delay:.7s}.beam.b3{animation-delay:.9s}
-@keyframes draw{to{stroke-dashoffset:0}}
-section{padding:5.5rem 0}
-.why{border-top:1px solid var(--line)}
-.why .grid{display:grid;gap:3rem}
-.why .problem{color:var(--mute);font-size:1.25rem}
-.why .solution{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.25}
-.why .tag{display:block;color:var(--blue2);font-size:.95rem;font-weight:600;margin-bottom:.6rem}
-.sec-head{margin-bottom:2.5rem;max-width:36rem}
-.cards{display:grid;gap:1.25rem}
-.card{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:1.75rem;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.card svg{width:34px;height:34px;stroke:var(--green);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.1rem}
-.card p{color:var(--mute);margin-top:.6rem}
-.steps{display:grid;gap:0;border-top:1px solid var(--line)}
-.step{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.6rem 0;border-bottom:1px solid var(--line)}
-.step .n{font-family:"Instrument Serif",Georgia,serif;font-size:2rem;color:var(--blue2);line-height:1}
-.step p{color:var(--mute);margin-top:.35rem;max-width:30rem}
-.founders{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-.founders p{color:var(--mute);max-width:34rem;margin:1.1rem auto 2rem;font-size:1.15rem}
-.btn.lg{padding:1rem 2rem;font-size:1.05rem}
-.drive .box{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:2rem}
-.drive p{color:var(--mute);margin-top:.9rem;max-width:44rem}
-.drive ul{color:var(--mute);padding-left:1.2rem;margin:.9rem 0 0}
-.drive .small{font-size:.95rem}
-footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;color:var(--mute);font-size:.95rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
-footer a{color:var(--mute);margin-right:1.25rem}
-footer a:hover{color:var(--ink)}
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-.no-js .reveal{opacity:1;transform:none}
-@media(min-width:56rem){.hero{grid-template-columns:1.05fr 1fr}.why .grid{grid-template-columns:1fr 1.3fr}.cards{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(3,1fr);border-top:0}.step{grid-template-columns:1fr;border-bottom:0;border-top:1px solid var(--line);padding-right:2rem}}
-@media(max-width:40rem){.nav nav a:not(.btn){display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.beam{animation:none;stroke-dashoffset:0}.reveal{opacity:1;transform:none;transition:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRISM by Maxwellian | Evidence-Led Investment Intelligence</title>
+  <meta name="description" content="PRISM turns pitch decks, financial models and CRM records into traceable diligence, risk analysis and investment intelligence.">
+  <meta name="theme-color" content="#fafafa">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://maxwellian.help/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PRISM by Maxwellian">
+  <meta property="og:title" content="Investment decisions, with the evidence attached.">
+  <meta property="og:description" content="Traceable diligence, risk analysis and pipeline intelligence for modern investment teams.">
+  <meta property="og:url" content="https://maxwellian.help/">
+  <meta property="og:image" content="https://maxwellian.help/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PRISM by Maxwellian">
+  <meta name="twitter:description" content="Investment decisions, with the evidence attached.">
+  <meta name="twitter:image" content="https://maxwellian.help/og-image.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Maxwellian","url":"https://maxwellian.help/","email":"info@maxwellian.help","brand":{"@type":"Brand","name":"PRISM"}},{"@type":"WebSite","name":"PRISM by Maxwellian","url":"https://maxwellian.help/","description":"Evidence-led decision intelligence for investment teams."}]}
+  </script>
 </head>
-<body class="no-js">
-<header class="nav"><div class="wrap">
-<a class="logo" href="#top" aria-label="PRISM home"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 22 20H2z" fill="none" stroke="#5b8cff" stroke-width="1.8" stroke-linejoin="round"/></svg>PRISM</a>
-<nav><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#founders">Founders</a><a href="#drive-connector">Drive Connector</a><a class="btn sm" href="https://maxwellian.decilehub.com/submit_your_company">Submit a company</a></nav>
-</div></header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="PRISM home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 29 27H3Z"/><path d="M8 17h16"/></svg>
+        <span>PRISM</span><small>BY MAXWELLIAN</small>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation" data-nav-toggle>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#product">Product</a>
+        <a href="#method">Method</a>
+        <a href="#founders">For founders</a>
+        <a href="#drive-connector">Drive Connector</a>
+        <a class="button button-small" href="https://maxwellian.decilehub.com/submit_your_company" target="_blank" rel="noopener noreferrer">Submit a company <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-<main id="top">
-<div class="wrap hero">
-<div>
-<h1>Decision intelligence for the modern financial institution.</h1>
-<p class="lead">PRISM transforms raw data into actionable, causal investment intelligence. Automate due diligence, mitigate risk and surface high-conviction opportunities with AI.</p>
-<div class="cta"><a class="btn" href="https://maxwellian.decilehub.com/submit_your_company">Submit your company for review</a><a class="btn ghost" href="https://notion.notion.site/The-AI-Fundraising-Kit-281efdeead058156bd19e58435c270aa">Explore the AI Fundraising Kit</a></div>
-</div>
-<div class="viz" role="img" aria-label="Scattered data points converge into a prism and leave as three clear outputs: risk, evidence and decision.">
-<svg viewBox="0 0 560 400" aria-hidden="true">
-<defs>
-<linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#5b8cff"/></linearGradient>
-<linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#6ee7b7"/></linearGradient>
-<linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
-<linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgba(255,255,255,.14)"/><stop offset="1" stop-color="rgba(255,255,255,.02)"/></linearGradient>
-</defs>
-<g stroke="rgba(255,255,255,.18)" stroke-width="1">
-<line x1="22" y1="70" x2="222" y2="195"/><line x1="48" y1="130" x2="222" y2="195"/><line x1="18" y1="190" x2="222" y2="195"/><line x1="60" y1="250" x2="222" y2="195"/><line x1="30" y1="320" x2="222" y2="195"/><line x1="110" y1="95" x2="222" y2="195"/><line x1="120" y1="300" x2="222" y2="195"/>
-</g>
-<g fill="#9aa3b5"><circle cx="22" cy="70" r="3"/><circle cx="48" cy="130" r="2.5"/><circle cx="18" cy="190" r="3.5"/><circle cx="60" cy="250" r="2.5"/><circle cx="30" cy="320" r="3"/><circle cx="110" cy="95" r="2"/><circle cx="120" cy="300" r="2.5"/></g>
-<polygon points="280,90 390,290 170,290" fill="url(#face)" stroke="rgba(255,255,255,.55)" stroke-width="1.5" stroke-linejoin="round"/>
-<line x1="222" y1="195" x2="338" y2="195" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>
-<g fill="none" stroke-width="3" stroke-linecap="round">
-<path class="beam" d="M338 195 L520 120" stroke="url(#g1)"/>
-<path class="beam b2" d="M338 195 L520 200" stroke="url(#g2)"/>
-<path class="beam b3" d="M338 195 L520 280" stroke="url(#g3)"/>
-</g>
-<g font-family="Inter,system-ui,sans-serif" font-size="13" fill="#eef1f6"><text x="440" y="108">Risk score</text><text x="440" y="190">Evidence</text><text x="440" y="300">Decision</text></g>
-</svg>
-</div>
-</div>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> PRISM / DECISION INTELLIGENCE</p>
+          <h1 id="hero-title">Investment decisions, <span>with the evidence attached.</span></h1>
+          <p class="hero-lead">PRISM turns pitch decks, financial models and CRM records into traceable diligence—so investment teams can interrogate risk, compare opportunities and defend the decision.</p>
+          <div class="hero-actions">
+            <a class="button" href="#product">Explore the workspace <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="https://maxwellian.decilehub.com/submit_your_company" target="_blank" rel="noopener noreferrer">Submit a company <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">From unstructured inputs to a defensible investment view.</p>
+        </div>
 
-<section class="why"><div class="wrap grid">
-<p class="problem reveal"><span class="tag">The problem</span>The modern financial landscape is drowning in unstructured data. Manual due diligence is slow, biased and often misses critical red flags.</p>
-<p class="solution reveal"><span class="tag" style="font-family:Inter,system-ui,sans-serif">The solution</span>PRISM is the intelligent layer between data and decision. Autonomous AI agents continuously analyze, forecast and optimize your pipeline, turning raw market data into investment intelligence in real time.</p>
-</div></section>
+        <div class="workspace" aria-label="Interactive illustrative PRISM workspace">
+          <div class="workspace-topbar">
+            <div><span class="workspace-kicker">ILLUSTRATIVE WORKSPACE</span><strong>Northstar Systems</strong></div>
+            <span class="workspace-stage">SERIES B / REVIEW</span>
+          </div>
+          <div class="workspace-tabs" role="tablist" aria-label="Workspace views">
+            <button type="button" role="tab" id="tab-decision" aria-controls="panel-decision" aria-selected="true" tabindex="0" data-tab="decision">Decision</button>
+            <button type="button" role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="false" tabindex="-1" data-tab="evidence">Evidence</button>
+            <button type="button" role="tab" id="tab-risks" aria-controls="panel-risks" aria-selected="false" tabindex="-1" data-tab="risks">Open risks <span>2</span></button>
+          </div>
+          <div class="workspace-body">
+            <section class="workspace-panel" role="tabpanel" id="panel-decision" aria-labelledby="tab-decision" data-panel="decision">
+              <p class="panel-label">INVESTMENT SIGNAL</p>
+              <div class="signal-row"><h2>Promising, with two open questions.</h2><span class="signal-badge">REVIEW</span></div>
+              <div class="coverage"><div><span>Evidence coverage</span><strong>18 sources mapped</strong></div><div class="coverage-track" aria-hidden="true"><span></span></div></div>
+              <div class="synthesis">
+                <p class="panel-label">LATEST SYNTHESIS</p>
+                <p>Revenue quality is supported by the financial model. Customer concentration still needs verification before the investment committee review.</p>
+                <div class="source-tags"><span>Financial model · Sheet 4</span><span>Pitch deck · p. 18</span></div>
+              </div>
+            </section>
+            <section class="workspace-panel" role="tabpanel" id="panel-evidence" aria-labelledby="tab-evidence" data-panel="evidence" hidden>
+              <p class="panel-label">TRACEABLE CLAIMS</p>
+              <div class="evidence-list">
+                <article><span class="evidence-index">01</span><div><h2>Revenue growth is supported.</h2><p>Model outputs and management presentation tell a consistent story.</p><span class="source-line">Financial model · Sheet 4</span></div><span class="evidence-state">MAPPED</span></article>
+                <article><span class="evidence-index">02</span><div><h2>Retention claim needs context.</h2><p>The deck reports retention without a cohort definition.</p><span class="source-line">Pitch deck · p. 12</span></div><span class="evidence-state review">CHECK</span></article>
+                <article><span class="evidence-index">03</span><div><h2>Pipeline stage is inconsistent.</h2><p>Two CRM opportunities use different qualification criteria.</p><span class="source-line">CRM export · 3 records</span></div><span class="evidence-state review">CHECK</span></article>
+              </div>
+            </section>
+            <section class="workspace-panel" role="tabpanel" id="panel-risks" aria-labelledby="tab-risks" data-panel="risks" hidden>
+              <p class="panel-label">OPEN QUESTIONS</p>
+              <div class="risk-list">
+                <article><div class="risk-heading"><h2>Customer concentration</h2><span class="risk-level">HIGH</span></div><p>Verify revenue exposure and renewal terms for the three largest accounts.</p><div class="risk-meta"><span>Owner / Diligence</span><span>2 sources</span></div></article>
+                <article><div class="risk-heading"><h2>Margin sensitivity</h2><span class="risk-level medium">MEDIUM</span></div><p>Test gross-margin assumptions against changes in infrastructure cost.</p><div class="risk-meta"><span>Owner / Finance</span><span>1 model</span></div></article>
+              </div>
+            </section>
+          </div>
+          <div class="workspace-footer"><span class="mini-prism" aria-hidden="true">△</span> Every conclusion keeps its source.<span>DEMO DATA</span></div>
+        </div>
+      </div>
+    </section>
 
-<section id="capabilities"><div class="wrap">
-<div class="sec-head reveal"><h2>Built for capital allocation decisions.</h2></div>
-<div class="cards">
-<article class="card reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8 11h6M11 8v6"/></svg><h3>Automated due diligence</h3><p>Deep-dive analysis of financial health, market positioning and team competency in seconds.</p></article>
-<article class="card reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 20h18z"/><path d="M12 10v4M12 17v.01"/></svg><h3>Causal risk modeling</h3><p>Identify hidden vulnerabilities and simulate outcomes before capital is deployed.</p></article>
-<article class="card reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h6"/><path d="m16 15 2 2 3-4"/></svg><h3>Pipeline intelligence</h3><p>Score, rank and track inbound opportunities with AI-driven precision, integrating with your existing CRM.</p></article>
-</div></div></section>
+    <div class="source-rail" aria-label="Example PRISM inputs and output">
+      <div class="shell source-rail-inner">
+        <span class="rail-label">RAW INPUTS</span>
+        <span>Pitch decks</span><span>Financial models</span><span>CRM records</span><span>Market data</span>
+        <svg viewBox="0 0 46 16" aria-hidden="true"><path d="M1 8h42M36 2l7 6-7 6"/></svg>
+        <strong>Defensible decision</strong>
+      </div>
+    </div>
 
-<section id="process" style="padding-top:1rem"><div class="wrap">
-<div class="sec-head reveal"><h2>From raw inputs to a defensible decision.</h2></div>
-<div class="steps">
-<div class="step reveal"><span class="n">1</span><div><h3>Ingest</h3><p>Connect your data sources: CRM, pitch decks and financial models.</p></div></div>
-<div class="step reveal"><span class="n">2</span><div><h3>Analyze</h3><p>PRISM’s AI agents run deep, multi-modal due diligence.</p></div></div>
-<div class="step reveal"><span class="n">3</span><div><h3>Decide</h3><p>Receive evidence-backed recommendations and risk scores.</p></div></div>
-</div></div></section>
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="shell editorial-grid">
+        <p class="section-label">THE PROBLEM</p>
+        <div>
+          <h2 id="manifesto-title">Diligence doesn’t need more noise. It needs a clearer chain from <span>claim → evidence → decision.</span></h2>
+          <div class="manifesto-copy"><p>Critical context is scattered across documents, spreadsheets and pipeline notes. PRISM brings those fragments into one analytical layer, helping teams find the signal and see what supports it.</p></div>
+        </div>
+      </div>
+    </section>
 
-<section id="founders" class="founders"><div class="wrap reveal">
-<h2>Ready to be analyzed?</h2>
-<p>Submit your company directly to the Maxwellian AI Decision Intelligence pipeline for a comprehensive, unbiased review.</p>
-<a class="btn lg" href="https://maxwellian.decilehub.com/submit_your_company">Submit your proposal to Decile Hub</a>
-</div></section>
+    <section class="product-section" id="product" aria-labelledby="product-title">
+      <div class="shell">
+        <div class="section-heading editorial-grid">
+          <p class="section-label">THE WORKSPACE</p>
+          <div><h2 id="product-title">Interrogate the decision.<br>Not just the deck.</h2><p>Move from a high-level investment view to the exact source behind a claim—without losing the thread of the analysis.</p></div>
+        </div>
+        <div class="capability-list">
+          <article class="capability">
+            <span class="capability-number">01</span>
+            <h3>Evidence-backed diligence</h3>
+            <p>Surface material claims across financial health, market position and team context, then connect each conclusion to its supporting inputs.</p>
+            <div class="capability-detail" aria-label="Claim evidence and decision flow"><span>CLAIM</span><i></i><span>EVIDENCE</span><i></i><strong>DECISION</strong></div>
+          </article>
+          <article class="capability">
+            <span class="capability-number">02</span>
+            <h3>Causal risk modeling</h3>
+            <p>Identify hidden vulnerabilities, examine the assumptions behind a thesis and simulate where outcomes may change before capital is deployed.</p>
+            <div class="risk-diagram" aria-hidden="true"><span>Assumption</span><b></b><span>Pressure point</span><b></b><span>Outcome</span></div>
+          </article>
+          <article class="capability">
+            <span class="capability-number">03</span>
+            <h3>Pipeline intelligence</h3>
+            <p>Score, rank and track inbound opportunities with a consistent analytical frame that complements your existing CRM workflow.</p>
+            <div class="pipeline-diagram" aria-hidden="true"><span style="--w:88%"><b>Opportunity A</b><i>01</i></span><span style="--w:68%"><b>Opportunity B</b><i>02</i></span><span style="--w:48%"><b>Opportunity C</b><i>03</i></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="drive-connector" class="drive"><div class="wrap"><div class="box reveal">
-<h2>Maxwellian Drive Connector</h2>
-<p>A Google OAuth application from Maxwellian that lets ChatGPT find, read, create and update files in your own Google Drive, only when you ask it to in a ChatGPT conversation.</p>
-<ul><li>Accesses only the Drive files and metadata needed for the request you make.</li><li>Maxwellian does not store your Drive files.</li><li>Revoke access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li></ul>
-<p class="small">Read the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>. Maxwellian.help’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-</div></div></section>
-</main>
+    <section class="method-section" id="method" aria-labelledby="method-title">
+      <div class="shell method-grid">
+        <div class="method-intro"><p class="section-label light">THE METHOD</p><h2 id="method-title">A clear chain of reasoning.</h2><p>PRISM is the intelligent layer between raw information and an investment decision.</p></div>
+        <ol class="method-steps">
+          <li><span>01</span><div><h3>Ingest</h3><p>Connect CRM records, pitch decks and financial models. Start with the information your team already uses.</p><small>INPUT / UNSTRUCTURED DATA</small></div></li>
+          <li><span>02</span><div><h3>Analyze</h3><p>Run multi-modal diligence to extract claims, assess risk and connect conclusions to source material.</p><small>PROCESS / EVIDENCE MAPPING</small></div></li>
+          <li><span>03</span><div><h3>Decide</h3><p>Review evidence-backed recommendations, open questions and risk signals in one investment view.</p><small>OUTPUT / DEFENSIBLE DECISION</small></div></li>
+        </ol>
+      </div>
+    </section>
 
-<footer><div class="wrap">
-<div><strong style="letter-spacing:.14em;color:var(--ink)">PRISM</strong><br>© 2026 Maxwellian</div>
-<div><a href="mailto:info@maxwellian.help">info@maxwellian.help</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
-</div></footer>
+    <section class="founder-section" id="founders" aria-labelledby="founder-title">
+      <div class="shell founder-grid">
+        <div><p class="section-label">FOR FOUNDERS</p><h2 id="founder-title">Make your company easier to underwrite.</h2></div>
+        <div class="founder-copy"><p>Submit your company directly to the Maxwellian decision-intelligence pipeline for a comprehensive review, or explore practical AI resources for your raise.</p><div class="founder-actions"><a class="button button-dark" href="https://maxwellian.decilehub.com/submit_your_company" target="_blank" rel="noopener noreferrer">Submit your company <span aria-hidden="true">↗</span></a><a class="text-link" href="https://notion.notion.site/The-AI-Fundraising-Kit-281efdeead058156bd19e58435c270aa" target="_blank" rel="noopener noreferrer">Explore the AI Fundraising Kit <span aria-hidden="true">↗</span></a></div></div>
+      </div>
+    </section>
 
-<script>
-(function(){
-var b=document.body;b.classList.remove('no-js');
-var els=document.querySelectorAll('.reveal');
-if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
-els.forEach(function(e){io.observe(e)});
-})();
-</script>
+    <section class="questions-section" aria-labelledby="questions-title">
+      <div class="shell questions-grid">
+        <div><p class="section-label">QUICK ANSWERS</p><h2 id="questions-title">What PRISM brings into focus.</h2></div>
+        <div class="accordion-list">
+          <details><summary>What can PRISM analyze?<span aria-hidden="true"></span></summary><p>PRISM is designed to work across pitch decks, financial models, CRM records and market data, depending on the sources connected to your workflow.</p></details>
+          <details><summary>What does the analysis produce?<span aria-hidden="true"></span></summary><p>Evidence-backed recommendations, risk signals and pipeline intelligence—organized so your team can move from a conclusion back to its supporting material.</p></details>
+          <details><summary>Who is the company submission for?<span aria-hidden="true"></span></summary><p>Founders can submit their company to Maxwellian through Decile Hub for review. The secure submission form opens in a new tab.</p></details>
+          <details><summary>Is the workspace above showing live analysis?<span aria-hidden="true"></span></summary><p>No. Northstar Systems is an illustrative company and the workspace uses demo data to explain the intended PRISM workflow.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="drive-section" id="drive-connector" aria-labelledby="drive-title">
+      <div class="shell drive-grid">
+        <div><p class="section-label">A SEPARATE MAXWELLIAN TOOL</p><h2 id="drive-title">Maxwellian Drive Connector</h2></div>
+        <div class="drive-copy"><p>A Google OAuth application that lets ChatGPT find, read, create and update files in your own Google Drive, only when you ask it to in a ChatGPT conversation.</p><ul><li>Accesses only the Drive files and metadata needed for your request.</li><li>Maxwellian does not store your Drive files.</li><li>Revoke access at any time through your Google permissions.</li></ul><div class="legal-links"><a class="text-link" href="privacy.html">Privacy Policy</a><a class="text-link" href="terms.html">Terms of Service</a><a class="text-link" href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google permissions <span aria-hidden="true">↗</span></a></div><p class="fine-print">Maxwellian.help’s use and transfer to any other app of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-top"><a class="brand footer-brand" href="#top" aria-label="PRISM home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 29 27H3Z"/><path d="M8 17h16"/></svg><span>PRISM</span></a><p>Raw data in.<br>Defensible decisions out.</p><a class="footer-email" href="mailto:info@maxwellian.help">info@maxwellian.help <span aria-hidden="true">↗</span></a></div>
+    <div class="shell footer-bottom"><span>© 2026 Maxwellian</span><span>Decision intelligence for financial institutions</span><nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div>
+  </footer>
+  <script src="src/main.js" defer></script>
 </body>
 </html>
