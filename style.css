@@ -1,0 +1,31 @@
+:root{--ink:#1b2430;--muted:#546071;--paper:#f7f8fa;--card:#fff;--line:#d5dbe3;--accent:#0f6e6e;--accent-ink:#fff}
+@media (prefers-color-scheme:dark){:root{--ink:#e8edf3;--muted:#9aa7b8;--paper:#11171f;--card:#18212c;--line:#2b3846;--accent:#4cc2c2;--accent-ink:#0b1116}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;gap:1rem;flex-wrap:wrap}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;color:var(--ink);text-decoration:none}
+nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);margin:0 0 1rem}
+h2{font-size:1.6rem;margin:0 0 .75rem}
+h3{font-size:1.15rem;margin:0 0 .35rem}
+.hero{padding:4.5rem 0 3rem}
+.hero p.lead{font-size:1.25rem;color:var(--muted);max-width:36rem}
+.btn{display:inline-block;margin:.5rem .75rem 0 0;padding:.65rem 1.2rem;border-radius:6px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600}
+.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+section{padding:2.5rem 0;border-top:1px solid var(--line)}
+.item{padding:1rem 0 1rem 1rem;border-left:3px solid var(--accent);margin:1rem 0}
+.item p{margin:0;color:var(--muted)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.25rem 1.5rem}
+dl{margin:0}dt{font-weight:700;margin-top:.75rem}dd{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 3rem;color:var(--muted);font-size:.95rem}
+footer a{margin-right:1rem}
+main.doc{padding:3rem 0}
+main.doc h2{margin-top:2rem}
+.updated{color:var(--muted)}

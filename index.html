@@ -1,75 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxwellian | Portfolio</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --text: #334155;
-        }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 0; background-color: var(--light); color: var(--text); line-height: 1.6; }
-        header { background: white; padding: 2rem 5%; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
-        header h1 { margin: 0; color: var(--dark); font-size: 1.5rem; }
-        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        .hero { padding: 6rem 5%; text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%); }
-        .hero h2 { font-size: 3rem; color: var(--dark); margin-bottom: 1rem; }
-        .hero p { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; }
-        .btn { display: inline-block; padding: 0.75rem 2rem; background-color: var(--primary); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: background-color 0.2s; margin: 0 0.5rem; }
-        .btn:hover { background-color: #1d4ed8; }
-        .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
-        .btn-outline:hover { background-color: var(--primary); color: white; }
-        .section { padding: 4rem 5%; max-width: 800px; margin: 0 auto; }
-        .section h3 { font-size: 2rem; color: var(--dark); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
-        .about-text { font-size: 1.1rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
-        .card h4 { margin-top: 0; color: var(--primary); font-size: 1.25rem; }
-        footer { text-align: center; padding: 2rem; background: var(--dark); color: #cbd5e1; margin-top: 4rem; }
-        footer a { color: white; text-decoration: none; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Maxwellian</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="privacy.html">Privacy</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h2>Welcome to Maxwellian.help</h2>
-        <p>Automation Engineer & Business Project Developer. I build self-hosted solutions using n8n and custom API integrations.</p>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-URL" target="_blank" class="btn">Connect on LinkedIn</a>
-        <a href="https://github.com/Maxwellian369" target="_blank" class="btn btn-outline">GitHub Profile</a>
-    </section>
-
-    <section id="about" class="section">
-        <h3>About Me</h3>
-        <p class="about-text">I am currently testing and developing future business applications. My focus is on leveraging self-hosted n8n instances to create automated workflows, integrating tools like ChatGPT with Google Drive to streamline operations and data management.</p>
-    </section>
-
-    <section id="projects" class="section">
-        <h3>Current Projects</h3>
-        <div class="card">
-            <h4>n8n Automation Hub</h4>
-            <p>A self-hosted automation environment designed to connect various APIs, including ChatGPT and Google Drive, to create seamless data flows and internal decision scaffolds.</p>
-        </div>
-        <div class="card">
-            <h4>OAuth Secure Integrations</h4>
-            <p>Developing secure, verified custom OAuth applications to ensure long-term API connectivity without the hassle of expiring tokens.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Maxwellian.help. Built with GitHub Pages. <a href="privacy.html">Privacy Policy</a></p>
-    </footer>
-
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/style.css"><title>Maxwellian | Automation Engineer</title>
+<meta name="description" content="Maxwellian builds self-hosted automations with n8n and custom API integrations, including a Google Drive connector for ChatGPT."></head><body>
+<header class="site"><div class="wrap"><a class="brand" href="/">Maxwellian</a><nav><a href="/#about">About</a><a href="/#projects">Projects</a><a href="/#drive-connector">Drive connector</a><a href="/privacy.html">Privacy</a></nav></div></header>
+<main class="wrap">
+<div class="hero"><h1>Automations that connect your tools and keep your data yours.</h1>
+<p class="lead">I'm an automation engineer and business project developer. I build self-hosted workflows with n8n and custom API integrations.</p>
+<a class="btn" href="#drive-connector">See the Drive connector</a><a class="btn alt" href="https://github.com/Maxwellian369">GitHub profile</a></div>
+<section id="about"><h2>About</h2>
+<p>I design and test business applications that run on infrastructure I control. My focus is self-hosted n8n instances that link tools such as ChatGPT and Google Drive, so routine work and file handling happen without manual steps.</p></section>
+<section id="projects"><h2>Projects</h2>
+<div class="item"><h3>n8n Automation Hub</h3><p>A self-hosted environment that connects APIs, including ChatGPT and Google Drive, into reliable data flows and internal decision workflows.</p></div>
+<div class="item"><h3>Maxwellian Drive Connector</h3><p>A custom Google OAuth application that lets ChatGPT read and write files in your own Google Drive when you ask it to. Details below.</p></div></section>
+<section id="drive-connector"><h2>Maxwellian Drive Connector</h2>
+<div class="box"><p><strong>What it does.</strong> After you sign in with Google and approve access, the connector lets ChatGPT find, read, create and update files in your Google Drive, only when you request it in a ChatGPT conversation.</p>
+<dl><dt>Who it is for</dt><dd>Individual users who want ChatGPT to work with their own Drive files.</dd>
+<dt>What data it touches</dt><dd>Only the Drive files and metadata needed to complete the request you made. Nothing is stored on Maxwellian servers.</dd>
+<dt>How to stop it</dt><dd>Remove access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</dd></dl>
+<p>Read the full <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.</p>
+<p>Maxwellian.help's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p></div></section>
+<section id="contact"><h2>Contact</h2><p>Questions or data requests: <a href="mailto:alireza.hassani.com@gmail.com">alireza.hassani.com@gmail.com</a></p></section>
+</main>
+<footer><div class="wrap"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="https://github.com/Maxwellian369">GitHub</a><p>© 2026 Maxwellian.help</p></div></footer></body></html>
