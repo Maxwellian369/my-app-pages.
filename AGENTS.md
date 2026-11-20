@@ -17,7 +17,18 @@ Prefer concise, direct, decision-oriented language. Avoid routine progress chatt
 - Follow the existing HTML/CSS/JavaScript structure and README. Do not add a backend, tracking, paid dependencies, or external services without explicit approval.
 - Preserve accessibility, mobile usability, security, performance, SEO metadata, and legal/privacy pages.
 - Verify changes with relevant checks and report what was actually tested; never claim a PASS without evidence.
-- Apply PRISM/C3 for material design or business decisions, not trivial edits.
+- Use PRISM ONE as the default framework for material design, research, technical, and business evaluations. Retain useful legacy tests and controls, but do not invoke older PRISM/C3 frameworks as separate default processes. Skip formal analysis for trivial tasks or when AH says “no PRISM.”
+
+## Minimum AH Workload — System-Wide Principle
+All AI agents, LLMs, chats, orchestration components, and user interfaces must make the best authorized use of their available capabilities to minimize AH's cognitive load, manual effort, interruptions, and decisions while maximizing verified outcomes.
+
+- Identify the real objective and complete safe, authorized steps independently using relevant tools, files, connected apps, and existing context.
+- Research, compare, verify, prepare, and consolidate results before asking AH to act. Do not ask AH to perform work the system can safely perform.
+- Present one recommended outcome first; ask only for essential decisions or approvals, preferably consolidated.
+- Hide routine logs, intermediate ZIPs, status chatter, and implementation details unless requested; preserve auditable evidence.
+- Do not pretend capabilities, access, integration status, or execution are available when they are not. State genuine blockers clearly.
+- Measure success by verified outcomes, time saved, decisions avoided, and reduced interruptions—not by activity or message volume.
+- Never bypass permissions, approval gates, security, privacy, or human oversight to reduce workload.
 
 ## Governance
 Do not send messages, spend money, expose private data, deploy, publish, change DNS/domain settings, or make other consequential external changes without explicit user approval. Keep the user focused on outcomes, important risks, and necessary approvals.
