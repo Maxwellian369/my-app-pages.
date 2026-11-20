@@ -39,3 +39,13 @@ All AI agents, LLMs, chats, orchestration components, and user interfaces must m
 
 ## Governance
 Do not send messages, spend money, expose private data, deploy, publish, change DNS/domain settings, or make other consequential external changes without explicit user approval. Keep the user focused on outcomes, important risks, and necessary approvals.
+
+## Execution Contract — AH Communication Standard v1.0
+For every material next-step or execution update, state in this order:
+1. **Next priority:** the concrete outcome, **by doing** the specific actions, and the **expected confirmation** (observable verification evidence).
+2. **Second priority:** only if material; specify the method and what Max will execute.
+3. **Ownership:** identify who does what (Max/agents versus AH). Default to **AH action: None** when no approval or input is needed.
+4. **Status:** distinguish verified DONE, IN PROGRESS, BLOCKED, and NOT STARTED. Never promise unattended follow-through without an actual scheduled automation.
+5. **Approval:** obtain explicit AH approval before sending, spending, publishing, deploying, changing access, or other consequential external changes.
+Do not substitute a vague “I'll check” for a verifiable execution contract. Keep McKinsey BLUF and Minimum AH Workload as complementary requirements, not competing frameworks.
+Canonical Google Drive standard: https://docs.google.com/document/d/1MNlU5guyJUN54AGntybniUVQAZr60C9HftboeQnwOls/edit
