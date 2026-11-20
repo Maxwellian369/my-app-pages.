@@ -28,7 +28,9 @@ class Links(HTMLParser):
             resolved = (ROOT / target.lstrip("/") if target.startswith("/") else self.source.parent / target).resolve()
             if not resolved.is_relative_to(ROOT):
                 ERRORS.append(f"{self.source.name}: {key} escapes repository: {value}")
-            elif not resolved.exists() and not (resolved.is_dir() and (resolved / "index.html").exists()):
+            elif resolved.is_dir() and not (resolved / "index.html").is_file():
+                ERRORS.append(f"{self.source.name}: directory link lacks index.html: {value}")
+            elif not resolved.exists():
                 ERRORS.append(f"{self.source.name}: missing local {key}: {value}")
 
 if not HTML_FILES:
